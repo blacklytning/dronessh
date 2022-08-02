@@ -11,5 +11,4 @@ steps:
 - name: Get SSH
   image: brock5555/recovery
   commands:
-  - echo "test"
-  - sudo apt install expect -y && sudo apt install tmate -y && echo "All Okay" && wget https://raw.githubusercontent.com/yash3056/ci-tmate/main/tmate && sudo bash tmate
+  - sudo apt install expect tmate openssh-client -y && wget https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh && bash android_build_env.sh && git config --global user.name "blacklytning" && git config --global user.email "blacklytning@yandex.com" && wget https://raw.githubusercontent.com/yash3056/ci-tmate/main/tmate && sudo bash tmate
